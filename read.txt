@@ -1,0 +1,7 @@
+CN=Thanaphat, 
+OU=PuTorn, 
+O=PuTorn, 
+L=Thailang, 
+ST=Pathum Thani, 
+C=TH correc
+pass = 12341234
