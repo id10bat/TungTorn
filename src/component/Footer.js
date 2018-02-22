@@ -7,13 +7,13 @@ export default class Footer extends Component{
     manu(){
         Actions.Manu()
     }
-    Main(){
-        Actions.pop()
+    main(){
+        Actions.main()
     }
     render(){
         return(
             <View style={styles.Option}>
-                    <TouchableOpacity onPress={this.Main} style={styles.Botton} >
+                    <TouchableOpacity onPress={this.main} style={styles.Botton} >
                         <Text style={styles.Icon} >
                             ขาย
                         </Text>
