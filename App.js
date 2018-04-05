@@ -1,29 +1,36 @@
+/**
+ * Sample React Native App
+ * https://github.com/facebook/react-native
+ * @flow
+ */
+
 import React, { Component } from 'react';
 import {
+  Platform,
   StyleSheet,
-  View,
-  StatusBar 
+  Text,
+  View
 } from 'react-native';
 
+import ComponentIOS from './Platform/ComponentIOS';
+import ComponentAndroid from './Platform/ComponentAndroid';
 
-import Routes from './src/Router';
+const ComponentApp = Platform.select({
+  ios: () => {
+    return <ComponentIOS />
+  },
+  android: () => {
+    return <ComponentAndroid />
+  },
+});
 
 export default class App extends Component {
   render() {
     return (
-      <View style={styles.container}>
-        <StatusBar
-           backgroundColor="#c35046"
-           barStyle="light-content"
-         />
-        <Routes/>
-      </View>
+      <ComponentApp />
     );
   }
 }
 
-const styles = StyleSheet.create({
-  container : {
-    flex: 1,
-  }
-});
+
+
